@@ -35,12 +35,40 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
 
 }
 
+
+
+
+
 int ShoppingCart::GetNumItemsInCart() {
 
+    int x = cartItems.size();
+
+return x;
+    
+     
 }
+
+
+
 
 double ShoppingCart::GetCostOfCart() {
 
+    
+    
+double SHOPcartTOTAL=0;
+
+for (unsigned int y = 0; y < cartItems.size(); y++) {
+   
+   SHOPcartTOTAL= SHOPcartTOTAL + (cartItems.at(y).GetPrice()*cartItems.at(y).GetQuantity());
+   
+}
+
+return SHOPcartTOTAL;
+
+    
+    
+    
+    
 }
 
 void ShoppingCart::PrintTotal() {
